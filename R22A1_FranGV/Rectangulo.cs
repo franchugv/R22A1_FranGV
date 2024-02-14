@@ -18,6 +18,23 @@ namespace R22A1_FranGV
 
         // CONSTRUCCTORES
 
+        public Rectangulo() 
+        {
+            _ladoMenor = 0;
+            _ladoMayor = 0;
+        }
+
+        public Rectangulo(float ladoma) : this()
+        {
+            LadoMayor = ladoma;
+        }
+
+        public Rectangulo(float ladoma, float ladome)
+        {
+            LadoMayor = ladoma;
+            LadoMenor += ladome;
+        }
+
         // PROPIEDADES
 
         public float LadoMenor

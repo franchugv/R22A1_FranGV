@@ -62,13 +62,13 @@ namespace R22A1_FranGV
         {
             get
             {
-                if (_color == VALOR_DEFECTO) throw new Exception("Color no establecido");
+                ValidarDatoEstablecido(_color);
                 return _color;
             }
 
             set
             {
-                if (string.IsNullOrEmpty(value)) throw new Exception("Color: Cadena vacía");
+                ValidarCadena(value);
                 _color = value;
             }
         }
@@ -76,12 +76,13 @@ namespace R22A1_FranGV
         {
             get 
             {
-                if (_nombre == VALOR_DEFECTO) throw new Exception("Nombre no establecido");
+                ValidarDatoEstablecido(_nombre);
                 return _nombre;
             }
             set
             {
-                if (string.IsNullOrEmpty(value)) throw new Exception("Nombre: Cadena vacía");
+
+                ValidarCadena(value);
                 _nombre = value;
             }
         }
@@ -96,6 +97,17 @@ namespace R22A1_FranGV
         }
 
         // MÉTODOS PÚBLICOS/PRIVADOS
+
+
+        public static void ValidarDatoEstablecido(string cadena)
+        {
+            if (cadena == VALOR_DEFECTO) throw new Exception("Color no establecido");
+        }
+
+        public static void ValidarCadena(string cadena)
+        {
+            if (string.IsNullOrEmpty(cadena)) throw new Exception("cadena vacía");
+        } 
 
 
         /// <summary>
