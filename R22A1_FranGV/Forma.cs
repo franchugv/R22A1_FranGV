@@ -21,6 +21,16 @@ namespace R22A1_FranGV
         private string _nombre ;
         private Punto _centro;
 
+        public Forma(string nombre, string color, Punto centro)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Forma()
+        {
+            throw new System.NotImplementedException();
+        }
+
 
 
 

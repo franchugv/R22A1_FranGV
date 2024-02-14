@@ -7,11 +7,11 @@
       <FileName>Punto.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="R22A1_FranGV.Triangulo" Collapsed="true">
+  <Class Name="R22A1_FranGV.Rectangulo" Collapsed="true">
     <Position X="4.5" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CAEABAAgASAAAAAEAAAAAACAAAAAAAAAAAAAAAAAAAE=</HashCode>
-      <FileName>Triangulo.cs</FileName>
+      <FileName>Rectangulo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="R22A1_FranGV.Forma">
