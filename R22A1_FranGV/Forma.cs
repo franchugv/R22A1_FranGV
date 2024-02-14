@@ -19,6 +19,7 @@ namespace R22A1_FranGV
 
 
         private string _nombre ;
+        private Punto _centro;
 
 
 
@@ -29,7 +30,7 @@ namespace R22A1_FranGV
 
         // PROPIEDADES
 
-       
+
 
         public string Color
         {
@@ -55,6 +56,14 @@ namespace R22A1_FranGV
             }
         }
 
+        public Punto Punto
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         // MÉTODOS PÚBLICOS/PRIVADOS
 
         public override string ToString()
@@ -70,5 +79,9 @@ namespace R22A1_FranGV
             return cadena;
         }
 
+        public void Mover(Punto nuevaPosicion)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

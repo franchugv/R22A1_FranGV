@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace R22A1_FranGV
 {
-    public class Rectangulo : Forma
+    public class Triangulo : Forma
     {
 
         // MIEMBROS

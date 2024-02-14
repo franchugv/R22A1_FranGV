@@ -13,7 +13,27 @@ namespace R22A1_FranGV
 
         private float _x;
         private float _y;
-        
+
+        public Punto(float coordenadaX)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Punto(float coordenadaY)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Punto(float coordenadaX, float coordenadaY)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Punto()
+        {
+            throw new System.NotImplementedException();
+        }
+
         // PROOPIEDADES
 
         public float X
@@ -41,6 +61,5 @@ namespace R22A1_FranGV
                 _y = value;
             }
         }
-
     }
 }
