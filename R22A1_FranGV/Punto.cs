@@ -6,33 +6,46 @@ using System.Threading.Tasks;
 
 namespace R22A1_FranGV
 {
+
+    public enum TipoCoordenada : Byte { X, Y };
+
     public class Punto 
     {
 
-        // MIEMBROS
+        // MIEMBROS PRIVADOS
 
         private float _x;
         private float _y;
 
-        public Punto(float coordenadaX)
+        #region CONSTRUCTORES
+
+        public Punto()
         {
-            throw new System.NotImplementedException();
+            _x = 0.0f;
+            _y = 0.0f;
         }
 
-        public Punto(float coordenadaY)
+        public Punto(TipoCoordenada tipo, float coordenada)
         {
-            throw new System.NotImplementedException();
+
+            switch (tipo)
+            {
+                case TipoCoordenada.X:
+                    X = coordenada;
+                    break;
+                case TipoCoordenada.Y:
+                    Y = coordenada;
+                    break;
+            }
         }
+
 
         public Punto(float coordenadaX, float coordenadaY)
         {
             throw new System.NotImplementedException();
         }
 
-        public Punto()
-        {
-            throw new System.NotImplementedException();
-        }
+        #endregion
 
         // PROOPIEDADES
 

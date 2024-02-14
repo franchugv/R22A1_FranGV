@@ -9,7 +9,7 @@ namespace R22A1_FranGV
     public class Rectangulo : Forma
     {
 
-        // MIEMBROS
+        // MIEMBROS 
 
         private float _ladoMenor;
 
