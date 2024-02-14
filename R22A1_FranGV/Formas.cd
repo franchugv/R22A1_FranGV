@@ -3,7 +3,7 @@
   <Class Name="R22A1_FranGV.Punto">
     <Position X="0.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <HashCode>AAAAAAAIAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
       <FileName>Punto.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -17,11 +17,11 @@
   <Class Name="R22A1_FranGV.Forma">
     <Position X="2.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAACAAAABAIAAAEAAAAgAAAAAAAAAAAAAgAgAIAAAA=</HashCode>
+      <HashCode>BBAACAAAAAAIAAAEAAAAgAAAAAAAAAAAAAgAgAIAAAA=</HashCode>
       <FileName>Forma.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Punto" />
+      <Property Name="Centro" />
     </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
