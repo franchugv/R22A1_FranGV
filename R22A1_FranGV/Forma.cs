@@ -23,7 +23,7 @@ namespace R22A1_FranGV
         // MIEMBROS - CLASE -
 
         private string _color;
-        private string _nombre ;
+        private string _nombre;
         private Punto _centro;
 
 
