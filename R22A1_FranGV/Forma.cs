@@ -13,29 +13,45 @@ namespace R22A1_FranGV
     public class Forma
     {
 
+        // CONSTANSTES PRIVADOS 
+
+        private const string VALOR_DEFECTO = "Desconocido";
+
+
+
+
         // MIEMBROS - CLASE -
 
         private string _color;
-
-
         private string _nombre ;
         private Punto _centro;
 
-        public Forma(string nombre, string color, Punto centro)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public Forma()
-        {
-            throw new System.NotImplementedException();
-        }
 
 
 
 
 
         // CONSTRUCCTORES
+
+
+        public Forma()
+        {
+
+            _nombre = VALOR_DEFECTO;
+            _color = VALOR_DEFECTO;
+            _centro = new Punto(); // Ultiliza el valor del constructor por defecto de Punto
+
+        }
+
+        public Forma(string nombre, string color, Punto centro)
+        {
+
+            Nombre = nombre;
+            Color = color;
+            Mover(centro);
+
+        }
+
 
 
         // PROPIEDADES
@@ -46,52 +62,62 @@ namespace R22A1_FranGV
         {
             get
             {
+                if (_color == VALOR_DEFECTO) throw new Exception("Color no establecido");
                 return _color;
             }
 
             set
             {
+                if (string.IsNullOrEmpty(value)) throw new Exception("Color: Cadena vacía");
                 _color = value;
             }
         }
         public string Nombre
         {
             get 
-            { 
+            {
+                if (_nombre == VALOR_DEFECTO) throw new Exception("Nombre no establecido");
                 return _nombre;
             }
             set
             {
+                if (string.IsNullOrEmpty(value)) throw new Exception("Nombre: Cadena vacía");
                 _nombre = value;
             }
         }
 
-        public Punto Punto
+        public Punto Centro
         {
-            get => default;
-            set
+            get
             {
+                return _centro;
             }
+
         }
 
         // MÉTODOS PÚBLICOS/PRIVADOS
 
-        public override string ToString()
-        {
-            // recursos
 
-            string cadena = "";
-
-            // salida
-
-            cadena = "";
-
-            return cadena;
-        }
-
+        /// <summary>
+        /// Establece el nuevo centro a la forma
+        /// </summary>
+        /// <param name="nuevaPosicion">Nueva posición del centro</param>
         public void Mover(Punto nuevaPosicion)
         {
-            throw new System.NotImplementedException();
+
+            _centro = nuevaPosicion;
+
         }
+
+
+        public override string ToString()
+        {
+            // return ($"La forma {Nombre} de color {Color} está situada en el punto x: {Punto.X} Y: {Punto.Y}");
+
+            return ($"La forma {Nombre} de color {Color} está situada en el punto {Centro}");
+
+        }
+
+
     }
 }

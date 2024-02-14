@@ -25,7 +25,12 @@ namespace R22A1_FranGV
             _y = 0.0f;
         }
 
-        public Punto(TipoCoordenada tipo, float coordenada)
+        /// <summary>
+        /// Inicializa el Punto con una coordenada
+        /// </summary>
+        /// <param name="tipo">Coordenada a establecer</param>
+        /// <param name="coordenada">Valor de la coordenada</param>
+        public Punto(TipoCoordenada tipo, float coordenada) : this() // Reutiliza el constructor por defecto
         {
 
             switch (tipo)
@@ -42,7 +47,8 @@ namespace R22A1_FranGV
 
         public Punto(float coordenadaX, float coordenadaY)
         {
-            throw new System.NotImplementedException();
+            X = coordenadaX;
+            Y = coordenadaY;   
         }
 
         #endregion
@@ -73,6 +79,11 @@ namespace R22A1_FranGV
             {
                 _y = value;
             }
+        }
+
+        public override string ToString()
+        {
+            return $"({X}, {Y})";
         }
     }
 }

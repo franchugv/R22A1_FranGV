@@ -119,7 +119,7 @@ namespace R22A1_FranGV
             // salida
 
             cadena = $"se trata de un rectangulo";
-            cadena += $"{Nombre}, {Color}, {Punto.X}";
+            cadena += $"{Nombre}, {Color}, {Centro.X}";
 
             return cadena;
         }
