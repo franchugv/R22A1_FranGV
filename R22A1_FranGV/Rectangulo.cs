@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace R22A1_FranGV
 {
-    public class Triangulo : Forma
+    public class Rectangulo : Forma
     {
 
         // MIEMBROS
@@ -119,7 +119,7 @@ namespace R22A1_FranGV
             // salida
 
             cadena = $"se trata de un rectangulo";
-            cadena += $"{Nombre}, {Color}, {_coordenada.y}";
+            cadena += $"{Nombre}, {Color}, {Punto.X}";
 
             return cadena;
         }

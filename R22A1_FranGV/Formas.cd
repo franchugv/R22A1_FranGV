@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="R22A1_FranGV.Punto">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>Punto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="R22A1_FranGV.Rectangulo">
+    <Position X="1.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAEABAAgASAAAAAEAAAAAACAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Rectangulo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="R22A1_FranGV.Forma">
+    <Position X="4.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAEAAAAgAAAAAAAAAAAAAAAgAIAAAA=</HashCode>
+      <FileName>Forma.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

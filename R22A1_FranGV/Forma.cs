@@ -9,7 +9,6 @@ namespace R22A1_FranGV
 
     // ENUM
 
-    public enum _coordenada : byte { x, y };
 
     public class Forma
     {
@@ -21,15 +20,16 @@ namespace R22A1_FranGV
 
         private string _nombre ;
 
-        // OBJETO
 
-        Forma Punto = new Forma();
+
 
 
         // CONSTRUCCTORES
 
 
         // PROPIEDADES
+
+       
 
         public string Color
         {
