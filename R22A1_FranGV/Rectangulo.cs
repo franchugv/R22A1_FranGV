@@ -32,7 +32,7 @@ namespace R22A1_FranGV
         public Rectangulo(float ladoma, float ladome)
         {
             LadoMayor = ladoma;
-            LadoMenor += ladome;
+            LadoMenor = ladome;
         }
 
         // PROPIEDADES
