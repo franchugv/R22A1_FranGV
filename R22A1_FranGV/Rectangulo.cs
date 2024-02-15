@@ -18,22 +18,37 @@ namespace R22A1_FranGV
 
         // CONSTRUCCTORES
 
-        public Rectangulo() 
+        public Rectangulo(float ladomayor, float ladoomenor) : base() // Usa el constructor por defecto de la clase padre/base
         {
-            _ladoMenor = 0;
-            _ladoMayor = 0;
+
+            //Nombre = VALOR_DEFECTO;
+            //Color = VALOR_DEFECTO;
+            //Mover(new Punto());     // Hay que instanciar un nuevo punto
+
+
+
+            LadoMayor = ladomayor;
+            LadoMenor = ladoomenor;
         }
 
-        public Rectangulo(float ladoma) : this()
+        //public Rectangulo(float ladoMenor, float ladoMayor, string nombre, string color, Punto posicion) : this(ladoMayor, ladoMenor) // despues de los dos puntos se ejecuta antes.
+        //{
+
+        //    Nombre = nombre;
+        //    Color = color;
+        //    Mover(posicion);
+
+        //}
+
+
+        public Rectangulo(float ladoMenor, float ladoMayor, string nombre, string color, Punto posicion) : base(nombre, color, posicion)
         {
-            LadoMayor = ladoma;
+
+            LadoMayor = ladoMayor;
+
+            LadoMenor = ladoMenor;
         }
 
-        public Rectangulo(float ladoma, float ladome)
-        {
-            LadoMayor = ladoma;
-            LadoMenor = ladome;
-        }
 
         // PROPIEDADES
 
@@ -45,6 +60,7 @@ namespace R22A1_FranGV
             }
             set
             {
+                ValidadLado(value);
                 _ladoMenor = value;
             }
         }
@@ -53,20 +69,44 @@ namespace R22A1_FranGV
         {
             get 
             {
-            return _ladoMayor;
+                return _ladoMayor;
             }
             set
             {
+                // VALIDAR LA ENTRADA (value)
+                ValidadLado(value);
                 _ladoMayor = value;
+            }
+        }
+
+
+
+        public float Perimetro
+        {
+            get
+            {
+                return perimetro();
+            }
+
+        }
+
+        public float Area
+        {
+            get
+            {
+                return area();
             }
         }
 
 
         // MÉTODOS PÚBLICOS/PRIVAVADOS
 
-
-
-        public float area()
+        private void ValidadLado(float lado)
+        {
+            if (lado <= 0) throw new Exception("Lado incorrecto cara pan");
+        }
+        
+        private float area()
         {
             // recursos
 
@@ -81,7 +121,7 @@ namespace R22A1_FranGV
             return area;
         }
 
-        public float perimetro()
+        private float perimetro()
         {
             // recursos
 
@@ -89,43 +129,30 @@ namespace R22A1_FranGV
 
             // proceso
 
-            perimetro = ((2 * LadoMayor) + (2 * LadoMenor));
+            perimetro = 2 * (LadoMayor + LadoMenor);
 
             // salida
 
             return perimetro;
         }
 
-        public static float CambiarTamañoLadoMayor(float escala, float ladomayor)
+        public void CambiarTamanio(float factorEscala)
         {
-            // RECURSOS
+            // Validación de la Escala
+            try
+            {
+                ValidadLado(factorEscala);
+            }
+            catch(Exception error) 
+            {
+                throw new Exception("El factor de escala es incorrecto");
+            }
 
-            float resultado = 0;
-
-            // PROCESO
-
-           resultado = escala * ladomayor;
-
-            // SALIDA
-
-            return resultado;
+            // CALCULO
+            LadoMayor *= factorEscala;
+            LadoMenor *= factorEscala;
         }
 
-
-        public static float CambiarTamañoLadoMenor(float escala, float ladomenor)
-        {
-            // RECURSOS
-
-            float resultado = 0;
-
-            // PROCESO
-
-            resultado = escala * ladomenor;
-
-            // SALIDA
-
-            return resultado;
-        }
 
         public override string ToString()
         {
@@ -135,12 +162,12 @@ namespace R22A1_FranGV
 
             // salida
 
-            cadena = $"se trata de un rectangulo";
-            cadena += $"{Nombre}, {Color}, {Centro.X}";
+            cadena = base.ToString();
+            cadena += $"\n Se trata de un Rectángulo de lados {LadoMayor}, {LadoMenor}";
+
 
             return cadena;
         }
-
 
 
     }

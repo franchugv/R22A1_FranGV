@@ -15,7 +15,7 @@ namespace R22A1_FranGV
 
         // CONSTANSTES PRIVADOS 
 
-        private const string VALOR_DEFECTO = "Desconocido";
+        protected const string VALOR_DEFECTO = "Desconocido";
 
 
 

@@ -7,7 +7,7 @@
       <FileName>Punto.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="R22A1_FranGV.Rectangulo" Collapsed="true">
+  <Class Name="R22A1_FranGV.Rectangulo">
     <Position X="4.5" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CAEABAAgASAAAAAEAAAAAACAAAAAAAAAAAAAAAAAAAE=</HashCode>
@@ -17,7 +17,7 @@
   <Class Name="R22A1_FranGV.Forma">
     <Position X="2.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BBAACAAAAAAIAAAEAAAAgAAAAAAAAAAAAAgAgAIAAAA=</HashCode>
+      <HashCode>BBgACAgAAAAIAAAEAAAAgAAAAAAAAAAAAAgAgAIAAAA=</HashCode>
       <FileName>Forma.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
